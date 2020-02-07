@@ -3,17 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve && npm run-script prettier-watch",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "prettier-watch": "onchange '**/*.ts' -- prettier --write {{changed}}"
+    "e2e": "ng e2e"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "lint": "ng lint"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "private": true,
