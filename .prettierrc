@@ -7,7 +7,9 @@
   "trailingComma": 'none',
   "bracketSpacing": true,
   "arrowParens": 'avoid',
-  "parser": 'typescript'
+   "rules": {
+    "prettier/prettier": [true, {"singleQuote": true, "tabWidth": 4}]
+  }
 }
 
  
