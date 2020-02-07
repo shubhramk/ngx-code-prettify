@@ -3,10 +3,11 @@
   "tabWidth": 2,    
   "useTabs": true,  
   "semi": true,
-  "singleQuote": false,
+  "singleQuote": true,
   "trailingComma": 'none',
   "bracketSpacing": true,
   "arrowParens": 'avoid',
+  "parser": 'all',
    "rules": {
     "prettier/prettier": [true, {"singleQuote": true, "tabWidth": 4}]
   }
