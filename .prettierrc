@@ -4,9 +4,9 @@
   "useTabs": true,  
   "semi": true,
   "singleQuote": false,
-  "trailingComma": 'none', // other options `es5` or `all`
+  "trailingComma": 'none',
   "bracketSpacing": true,
-  "arrowParens": 'avoid',  // other option 'always'
+  "arrowParens": 'avoid',
   "parser": 'typescript'
 }
 
