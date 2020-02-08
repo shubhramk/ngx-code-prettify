@@ -6,12 +6,15 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint": "ng lint --fix",
+    "e2e": "ng e2e",
+    "pretty": "onchange ./src/**/*.{scss,ts,js,html} -- pretty-quick --write {{changed}}",
+    "linting": "onchange ./src/**/*.{scss,ts,js,html} -- npm run lint",
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run linting\" \"npm run pretty\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && ng lint"
+      "pre-commit": "npm run lint && pretty-quick --staged"
     }
   },
   "private": true,
@@ -24,6 +27,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "concurrently": "^5.1.0",
     "onchange": "^6.1.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
