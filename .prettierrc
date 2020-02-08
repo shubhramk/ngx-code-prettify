@@ -4,12 +4,15 @@
   "useTabs": true,  
   "semi": true,
   "singleQuote": true,
-  "trailingComma": 'none',
+  "trailingComma": 'es5',
   "bracketSpacing": true,
   "arrowParens": 'avoid',
-   "rules": {
-    "prettier/prettier": [true, {"singleQuote": true, "tabWidth": 4}]
-  }
+  "quoteProps":'as-needed',
+  "requirePragma":false,
+  "insertPragma":false,
+  "proseWrap":"preserve",
+  "htmlWhitespaceSensitivity":"css",
+  "endOfLine":"auto"
 }
 
  

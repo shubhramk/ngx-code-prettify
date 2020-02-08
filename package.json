@@ -5,12 +5,16 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prod": "ng build --prod --aot --buildOptimizer=true --extractCss=true",
     "test": "ng test",
     "lint": "ng lint --fix",
     "e2e": "ng e2e",
-    "pretty": "onchange ./src/**/*.{scss,ts,js,html} -- pretty-quick --write {{changed}}",
-    "linting": "onchange ./src/**/*.{scss,ts,js,html} -- npm run lint",
-    "dev": "concurrently --kill-others \"npm run start\" \"npm run linting\" \"npm run pretty\""
+    "pretty-quick": "pretty-quick",
+    "prettify:watch": "onchange ./src/**/*.{scss,ts,js,html} -- pretty-quick --write {{changed}}",
+    "linting:watch": "onchange ./src/**/*.{scss,ts,js,html} -- npm run lint",
+    "start-dev": "concurrently --kill-others \"npm run start\" \"npm run linting:watch\" \"npm run prettify:watch\"",
+    "build-dev": "npm run lint && npm run pretty-quick && npm run build",
+    "prod-dev": "npm run lint && npm run pretty-quick && npm run prod"
   },
   "husky": {
     "hooks": {
